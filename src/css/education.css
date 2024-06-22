@@ -1,0 +1,95 @@
+.qualifications {
+    padding: 20px;
+    padding-top: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.qualifications h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.qualifications h1.darkmode {
+    color: #fff;
+}
+
+.qualifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.qualification-item {
+    background: #ffffffdb;
+    border: 2px solid #ddd; /* Slightly thicker to emphasize the effect */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+.qualification-item.darkmode {
+    background-color: #000000db;
+    color: #fff;
+}
+
+.qualification-item:hover {
+    transform: translateY(-10px);
+    border-color: transparent; /* Hide default border color on hover to show the animation */
+    animation: borderColorRotate 3s linear infinite; /* Apply the color rotation animation */
+}
+
+.qualification-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.qualification-item h2.darkmode {
+    color: #fff;
+}
+
+.qualification-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.qualification-item h3.darkmode {
+    color: #a4a3a3;
+}
+
+.qualification-item span {
+    color: #777;
+}
+
+.qualification-item span.darkmode {
+    color: #b6b5b5;
+}
+
+.qualification-item p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.qualification-item p.darkmode {
+    color: #8c8c8c;
+}
+
+/* Define the keyframes for revolving border colors */
+@keyframes borderColorRotate {
+    0% {
+        border-color: #ff0000; /* Red */
+    }
+    25% {
+        border-color: #00ff00; /* Green */
+    }
+    50% {
+        border-color: #0000ff; /* Blue */
+    }
+    75% {
+        border-color: #ffff00; /* Yellow */
+    }
+    100% {
+        border-color: #ff0000; /* Red (back to start) */
+    }
+}

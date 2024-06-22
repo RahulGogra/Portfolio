@@ -1,0 +1,424 @@
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0px;
+    font-family: "Exo 2", sans-serif;
+    transition: background-color 0.5s ease-in-out;
+}
+
+body.darkmode {
+    background-color: #000000;
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hamburger {
+    display: none; /* Hide the hamburger menu icon by default */
+    cursor: pointer;
+    background-color: #2b2a2a;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+/* Styles for the hamburger bars */
+.bar {
+    display: "flex";
+    width: 30px;
+    height: 3px;
+    background-color: #908c8c;
+    margin: 6px 20px;
+    border-radius: 1px;
+    transition: transform 0.3s;
+}
+
+.bar1 {
+    top: 0;
+}
+.bar2 {
+    top: 13px;
+}
+.bar3 {
+    top: 26px;
+}
+
+/* Add styles for the crossed state */
+.hamburger.cross .bar1 {
+    transform: translateY(13px) rotate(45deg);
+    background-color: #3498db; /* Change the color when crossed */
+}
+
+.hamburger.cross .bar2 {
+    transform: translateX(30px); /* Slide to the right when crossed */
+    background-color: transparent; /* Make it transparent when crossed */
+}
+
+.hamburger.cross .bar3 {
+    transform: translateY(-13px) rotate(-45deg);
+    background-color: #3498db; /* Change the color when crossed */
+}
+
+.menu {
+    font-size: 20px;
+    border-bottom-style: solid;
+    border-bottom-color: #fff;
+    border-bottom-width: 2px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #2b2a2a;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: fixed;
+    transition: background-color 0.5s ease-in-out, color 0.3s ease-in-out;
+    transition: height 0.3s, padding 0.3s;
+    z-index: 2;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.5s ease-in-out;
+}
+
+.menu .hamburger {
+    position: absolute;
+    left: 0px;
+    top: 10px;
+}
+
+.menu .my-name {
+    font-size: 36px;
+    position: absolute;
+    right: 30px; /* Adjust the distance from the right edge as needed */
+    top: 18px;
+    display: flex;
+    align-items: center;
+    font-family: "Dancing Script", cursive;
+    text-decoration: none;
+}
+
+.menu li {
+    margin: 0 20px;
+    position: relative;
+    transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+}
+
+.menu li:hover {
+    transform: scale(1.1);
+}
+
+/* Style for the switch container */
+.switch {
+    top: 4px;
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Style for the hidden checkbox input */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Style for the switch slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/images/day-button.png");
+    background-size: cover;
+    background-position: center;
+    transition: 0.4s;
+    border-radius: 20px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.slider.darkmode {
+    background-image: url("/images/night-button.png");
+    transition: background-color 0.5s ease-in-out;
+}
+
+.slider.darkmode::before {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Style for the slider when in the checked (on) state */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 35px;
+    width: 35px;
+    background-color: rgb(255, 255, 255); /* Color of the switch slider */
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Style for the checked (on) state of the switch */
+.switch input:checked + .slider {
+    background-color: #007bff; /* Background color in the checked state */
+}
+
+/* Style for the checked (on) state of the slider */
+.switch input:checked + .slider:before {
+    transform: translateX(
+        45px
+    ); /* Move the slider to the right in the checked state */
+}
+
+/*  Home */
+
+#home {
+    padding-top: 200px;
+    display: flex;
+    color: #090909;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 75px;
+    transition: color 0.5s ease-in-out;
+}
+
+#home.darkmode {
+    color: #fff;
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(78, 78, 78, 0.5);
+    transition: text-shadow 0.5s ease-in-out;
+}
+
+#home h2.darkmode {
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* White text shadow */
+}
+
+.cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: black;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 0;
+        /* Cursor disappears at 0% and 100% of the animation */
+    }
+
+    50% {
+        opacity: 1;
+        /* Cursor is fully visible at 50% of the animation */
+    }
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Your.Image {
+    max-width: 250px;
+    margin-bottom: 50px;
+    border-radius: 50%;
+    border-radius: 400px;
+    /* Create a circle */
+    border-style: groove;
+    border-color: #000000;
+    transition: border-color 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.Your.Image.darkmode {
+    border-color: #fff;
+}
+
+.animated-text {
+    padding: 20px;
+    text-decoration: solid;
+    font-size: 26px;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.animated-text span {
+    display: none;
+    line-height: 1;
+}
+
+.animated-text span.active {
+    display: inline;
+}
+
+.animated-text:after {
+    content: ".";
+    display: inline;
+    width: 6px;
+    text-indent: 0;
+    background: var(--col-icon);
+    animation: blink 0.5s infinite alternate;
+}
+
+.socials {
+    margin-top: 150px 20px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.socials img {
+    margin: 0px 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.socials img.darkmode {
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+.Quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.Quote.darkmode {
+    color: #fff;
+    transition: color 0.5s ease-in-out;
+}
+
+.formHeading {
+    display: flex;
+    color: blueviolet;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b2a2a;
+    margin: 10px;
+    margin-bottom: 0;
+    z-index: 1;
+}
+
+.formFooter {
+    display: flex;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b2a2a;
+    margin: 10px;
+    margin-top: 0;
+    z-index: 1;
+}
+
+.form {
+    display: flex;
+    margin: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #2b2a2a;
+    justify-content: right;
+    align-items: center;
+    z-index: 2;
+}
+
+.form div {
+    flex: 1;
+}
+
+.form .fleximage {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 100%; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    flex: 1;
+}
+.form img {
+    max-width: 100%; /* Make the image responsive and shrink if there's not enough space */
+    height: auto; /* Maintain aspect ratio while resizing */
+}
+
+#submit-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#submit-form input,
+#submit-form #message {
+    color: #fff;
+    margin: 10px 0;
+    border: none;
+    border-bottom: solid blueviolet 2px;
+    margin: 20px;
+    font-size: 16px;
+    height: 50px;
+    background: none;
+}
+
+#submit-form input:focus,
+#submit-form #message:focus {
+    outline: 2px solid blueviolet; /* You can change "red" to your desired color */
+    border: none;
+    background-color: none;
+}
+
+#submit-form button {
+    display: flex;
+    width: fit-content;
+    border: none;
+    border: solid blueviolet 2px;
+    border-radius: 20px;
+    margin: 20px;
+    font-size: 16px;
+    background: blueviolet;
+}
+
+#submit-form button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

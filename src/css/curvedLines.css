@@ -1,0 +1,10 @@
+/* CurvedLines.css */
+
+.curved-lines-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f0f0f0; /* Optional background color */
+}

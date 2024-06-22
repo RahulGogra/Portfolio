@@ -1,0 +1,11 @@
+h2 {
+    margin-top: 100px;
+}
+
+.projects {
+    color: #000;
+}
+
+.projects.darkmode {
+    color: #fff;
+}

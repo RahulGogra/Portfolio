@@ -1,0 +1,117 @@
+.experience-page {
+    padding: 20px;
+    max-width: 800px;
+    margin: 90px auto 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-page h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-item {
+    position: relative; /* Ensure position is relative for the pseudo-element */
+    background-color: #fff;
+    border: 2px solid transparent; /* Start with transparent border */
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+        border-color 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.experience-item:hover {
+    transform: translateY(-5px); /* Move slightly upwards on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow on hover */
+    border-color: transparent; /* Hide default border color on hover */
+    animation: borderColorRotate 3s linear infinite; /* Continuous color rotation animation */
+}
+
+.experience-header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    transition: background-color 0.2s;
+}
+
+.experience-header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #007bff;
+}
+
+.experience-header h3 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.experience-header span {
+    font-size: 1rem;
+    color: #888;
+}
+
+.experience-description {
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.experience-description p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+@keyframes borderColorRotate {
+    0% {
+        border-color: #ff0000; /* Red */
+    }
+    25% {
+        border-color: #00ff00; /* Green */
+    }
+    50% {
+        border-color: #0000ff; /* Blue */
+    }
+    75% {
+        border-color: #ffff00; /* Yellow */
+    }
+    100% {
+        border-color: #ff0000; /* Red (back to start) */
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .experience-header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .experience-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .experience-header h3 {
+        font-size: 1rem;
+    }
+
+    .experience-header span {
+        font-size: 0.9rem;
+    }
+}
