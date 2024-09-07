@@ -65,7 +65,7 @@ function Header() {
 
     useEffect(() => {
         const elementsToToggle = document.querySelectorAll(
-            "body, .slider, #home, #home h2, .typed-text::after, .Your.Image, .socials img, .Quote, .center-container, .project1,.qualifications h1, .qualification-item, .qualification-item h2, .qualification-item h3, .qualification-item span, .qualification-item p"
+            "body, .slider, #home, #home h2, .typed-text::after, .Your.Image, .socials img, .Quote, .center-container, .section-title, .section-title, .project-card, .project-description, .tech-item,.qualifications h1, .qualification-item, .qualification-item h2, .qualification-item h3, .qualification-item span, .qualification-item p"
         );
         document.body.classList.add(
             isChecked
@@ -80,7 +80,7 @@ function Header() {
 
     const toggleTheme = () => {
         const elementsToToggle = document.querySelectorAll(
-            "body, .slider, #home, #home h2, .typed-text::after, .Your.Image, .socials img, .Quote, .center-container, .project1,.qualifications h1, .qualification-item, .qualification-item h2, .qualification-item h3, .qualification-item span, .qualification-item p"
+            "body, .slider, #home, #home h2, .typed-text::after, .Your.Image, .socials img, .Quote, .center-container, .section-title, .project-card, .project-description, .tech-item,.qualifications h1, .qualification-item, .qualification-item h2, .qualification-item h3, .qualification-item span, .qualification-item p"
         );
 
         if (isChecked) {

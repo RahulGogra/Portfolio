@@ -8,7 +8,7 @@ const experienceData = [
         id: 1,
         company: "Smart Cookie",
         role: "Backend Developer Intern",
-        duration: "May 2024 - Present",
+        duration: "May 2024 - Aug 2024",
         description:
             "Worked on developing and maintaining web applications using Php and MySql. Worked with a team of senior developers and implemented various project management tools to streamline workflow.",
     },
