@@ -131,6 +131,16 @@ li {
     transform: scale(1.1);
 }
 
+.menu.open {
+    padding-top: 200px;
+    height: 100%;
+    flex-direction: column;
+}
+
+.menu.open .menu-items {
+    margin: 20px;
+}
+
 /* Style for the switch container */
 .switch {
     top: 4px;
@@ -194,6 +204,59 @@ li {
     transform: translateX(
         45px
     ); /* Move the slider to the right in the checked state */
+}
+
+/* Hide the hamburger menu icon by default, only show on smaller screens */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+/* Styles for the hamburger bars */
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #908c8c;
+    margin: 6px 0;
+    transition: transform 0.3s;
+}
+
+/* Add styles for the crossed state */
+.hamburger.cross .bar1 {
+    transform: translateY(9px) rotate(45deg);
+    background-color: #3498db;
+}
+
+.hamburger.cross .bar2 {
+    opacity: 0;
+}
+
+.hamburger.cross .bar3 {
+    transform: translateY(-9px) rotate(-45deg);
+    background-color: #3498db;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 788px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu-items {
+        display: none;
+    }
+
+    .menu.open .menu-items {
+        display: block;
+    }
+
+    .my-name {
+        display: none;
+    }
 }
 
 /*  Home */
@@ -292,9 +355,10 @@ li {
 }
 
 .socials {
-    margin-top: 150px 20px;
+    margin-top: 20px;
     padding: 10px 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;

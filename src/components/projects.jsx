@@ -5,12 +5,12 @@ const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "ForecastHub",
+            title: "Algorithm Visulaizer",
             description:
-                "A weather forecasting application that provides real-time weather data for any location.",
-            image: "images/project1.png", // Replace with actual image URL
-            src: "https://w-cked.github.io/Forecasthub/",
-            techStack: ["React", "API", "CSS"],
+                "Developed an interactive tool to visualize basic data structures, binary trees, pathfinding algorithms, and greedy algorithms.",
+            image: "images/algovisual.png", // Replace with actual image URL
+            src: "https://github.com/username/project3/blob/main/index.html",
+            techStack: ["React", "Node.js", "MongoDB"],
         },
         {
             id: 2,
@@ -23,12 +23,12 @@ const Projects = () => {
         },
         {
             id: 3,
-            title: "Algorithm Visulaizer",
+            title: "ForecastHub",
             description:
-                "Developed an interactive tool to visualize basic data structures, binary trees, pathfinding algorithms, and greedy algorithms.",
-            image: "images/algovisual.png", // Replace with actual image URL
-            src: "https://github.com/username/project3/blob/main/index.html",
-            techStack: ["React", "Node.js", "MongoDB"],
+                "A weather forecasting application that provides real-time weather data for any location.",
+            image: "images/project1.png", // Replace with actual image URL
+            src: "https://w-cked.github.io/Forecasthub/",
+            techStack: ["React", "API", "CSS"],
         },
     ];
 
