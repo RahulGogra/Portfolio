@@ -4,15 +4,20 @@
     margin: 90px auto 0;
     text-align: center;
     background-color: #f9f9f9;
+    color: #333;
     border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-page.darkmode {
+    color: white;
+    background: #000000dd;
 }
 
 .experience-page h1 {
     font-size: 2.5rem;
     margin-top: 10px;
     margin-bottom: 30px;
-    color: #333;
 }
 
 .experience-list {
@@ -30,6 +35,10 @@
     cursor: pointer;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
         border-color 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.experience-item.darkmode {
+    background-color: #202020d3;
 }
 
 .experience-item:hover {
@@ -71,11 +80,18 @@
     animation: fadeIn 0.8s ease-in-out;
 }
 
+.experience-description.darkmode {
+    background-color: #1c1b1bd9;
+}
+
 .experience-description p {
     margin: 0;
     font-size: 1rem;
     color: #333;
     line-height: 1.5;
+}
+.experience-description.darkmode p {
+    color: white;
 }
 
 @keyframes borderColorRotate {

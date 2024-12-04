@@ -262,7 +262,7 @@ li {
 /*  Home */
 
 #home {
-    padding-top: 200px;
+    padding-top: 100px;
     display: flex;
     color: #090909;
     text-align: center;
@@ -277,7 +277,7 @@ li {
 
 #home h2 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-shadow: 2px 2px 4px rgba(78, 78, 78, 0.5);
     transition: text-shadow 0.5s ease-in-out;
 }
@@ -377,112 +377,80 @@ li {
     box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.3);
 }
 
-.Quote {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: color 0.5s ease-in-out;
+.about {
     z-index: 1;
+    padding-top: 50px;
+    font-size: 1.5rem;
 }
 
-.Quote.darkmode {
-    color: #fff;
-    transition: color 0.5s ease-in-out;
-}
-
-.formHeading {
-    display: flex;
-    color: blueviolet;
-    font-size: 50px;
-    align-items: center;
-    justify-content: center;
-    background-color: #2b2a2a;
-    margin: 10px;
-    margin-bottom: 0;
+.skills {
     z-index: 1;
-}
-
-.formFooter {
-    display: flex;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    background-color: #2b2a2a;
-    margin: 10px;
-    margin-top: 0;
-    z-index: 1;
+    margin: 30px;
+    padding-top: 50px;
 }
 
 .form {
-    display: flex;
-    margin: 10px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 60px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #2b2a2a;
-    justify-content: right;
-    align-items: center;
-    z-index: 2;
+    z-index: 1;
+    margin: 50px;
+    font-size: 24px;
 }
-
 .form div {
-    flex: 1;
+    font-size: 24px;
+}
+.form .formDes {
+    margin-bottom: 20px;
+}
+/* Centering the form */
+.contact-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form .fleximage {
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-    width: 100%; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    flex: 1;
-}
-.form img {
-    max-width: 100%; /* Make the image responsive and shrink if there's not enough space */
-    height: auto; /* Maintain aspect ratio while resizing */
-}
-
-#submit-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* Input and textarea styling */
+.contact-container input,
+.contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
 }
 
-#submit-form input,
-#submit-form #message {
+.contact-container input:focus,
+.contact-container textarea:focus {
+    border-color: #007bff;
+}
+
+/* Button styling */
+.contact-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
     color: #fff;
-    margin: 10px 0;
+    background-color: #007bff;
     border: none;
-    border-bottom: solid blueviolet 2px;
-    margin: 20px;
-    font-size: 16px;
-    height: 50px;
-    background: none;
-}
-
-#submit-form input:focus,
-#submit-form #message:focus {
-    outline: 2px solid blueviolet; /* You can change "red" to your desired color */
-    border: none;
-    background-color: none;
-}
-
-#submit-form button {
-    display: flex;
-    width: fit-content;
-    border: none;
-    border: solid blueviolet 2px;
-    border-radius: 20px;
-    margin: 20px;
-    font-size: 16px;
-    background: blueviolet;
-}
-
-#submit-form button:hover {
+    border-radius: 4px;
     cursor: pointer;
-    transform: scale(1.1);
+    transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-container h1 {
+        font-size: 1.5rem;
+    }
 }

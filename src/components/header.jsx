@@ -14,7 +14,7 @@ function Header() {
     useEffect(() => {
         // Apply the theme on component mount
         const elementsToToggle = document.querySelectorAll(
-            "body, .slider, #home, #home h2, .typed-text::after, .Your.Image, .socials img, .Quote, .center-container, .section-title, .project-card, .project-description, .tech-item,.qualifications h1, .qualification-item, .qualification-item h2, .qualification-item h3, .qualification-item span, .qualification-item p"
+            "body, .slider, #home, #home h2, .typed-text::after, .Your.Image, .socials img, .Quote, .center-container, .experience-page ,.experience-description,.experience-item,.experience-description p,.section-title, .project-card, .project-description, .tech-item,.qualifications h1, .qualification-item, .qualification-item h2, .qualification-item h3, .qualification-item span, .qualification-item p"
         );
         if (isChecked) {
             elementsToToggle.forEach((element) =>

@@ -45,7 +45,11 @@ const Experience = () => {
                             <span>{item.duration}</span>
                         </div>
                         {expanded === item.id && (
-                            <div className="experience-description">
+                            <div
+                                className={`experience-description ${localStorage.getItem(
+                                    "theme"
+                                )}`}
+                            >
                                 <p>{item.description}</p>
                             </div>
                         )}
