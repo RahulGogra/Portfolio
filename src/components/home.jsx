@@ -211,7 +211,7 @@ function Home() {
                     <img src="images/Instagram_logo.svg" alt="instagram" />
                 </a>
                 <a
-                    href="https://github.com/W-cked"
+                    href="https://github.com/RahulGogra"
                     target="_blank"
                     rel="author"
                     className="github"

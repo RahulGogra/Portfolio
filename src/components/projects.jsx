@@ -9,7 +9,7 @@ const Projects = () => {
             description:
                 "Developed an interactive tool to visualize basic data structures, binary trees, pathfinding algorithms, and greedy algorithms.",
             image: "images/algovisual.png", // Replace with actual image URL
-            src: "https://github.com/username/project3/blob/main/index.html",
+            src: "https://algorithm-visualizer-umber.vercel.app/",
             techStack: ["React", "Node.js", "MongoDB"],
         },
         {
@@ -18,7 +18,7 @@ const Projects = () => {
             description:
                 "A personal portfolio website showcasing my projects and skills.",
             image: "images/portfolio.png", // Replace with actual image URL
-            src: "https://rahulgogra-c9z9tk29q-rahuls-projects-037fefb4.vercel.app/",
+            src: "https://rahulgogra-rahuls-projects-037fefb4.vercel.app/",
             techStack: ["React", "CSS", "JavaScript"],
         },
         {
@@ -27,8 +27,8 @@ const Projects = () => {
             description:
                 "A weather forecasting application that provides real-time weather data for any location.",
             image: "images/project1.png", // Replace with actual image URL
-            src: "https://w-cked.github.io/Forecasthub/",
-            techStack: ["React", "API", "CSS"],
+            src: "https://RahulGogra.github.io/Forecasthub/",
+            techStack: ["Javascript", "API", "CSS"],
         },
     ];
 
